@@ -687,7 +687,7 @@ $(function() {
             $('body').removeClass('bg-black').addClass('bg-grey');
       
             $(sectionStart).hide('slow', function(){ $(sectionStart).remove(); });
-            $(sectionInfo).removeClass('hidden');
+            
         }
 
 
