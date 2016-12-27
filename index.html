@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="js/libs/webrtc.js"></script>
+    <script src="js/rtc-controller.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/functions.js"></script>
+</head>
+<body class="bg-green">
+<!--------------------------------------------------page login----------------------------------------------------->
+
+<div id="dvLogin" class="text-center vertical-center col-sm-12" style="z-index: 5">
+    <div class="row">
+
+        <div class="col-xs-12 text-center">
+
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" id="code-site" class="form-control" placeholder="Code site" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="code-event" class="form-control" placeholder="Code event" required>
+                </div>
+                <button id="launch" type="button" class="btn btn-primary">Launch &nbsp;<i class="glyphicon glyphicon-camera"></i></button>
+            </form>
+
+        </div>
+
+
+        <div class="dv-joint-animators text-center col-xs-12" style="margin-top: 20px">
+
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" id="code-channel" class="form-control" placeholder="Code pin" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="classroom" class="form-control" placeholder="Classroom" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="nickname" class="form-control" placeholder="Nickname" required>
+                </div>
+                <button type="button" id="joint-stream-animators" class="btn btn-primary">Joint &nbsp;<i class="glyphicon glyphicon-eye-open"></i></button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!--------------------------------------------------loading----------------------------------------------------->
+<div id="dvLoading" class="text-center col-sm-12 divHide">
+    <div class="loader vertical-center" ></div>
+    <h1>Loading...</h1>
+</div>
+
+<!-------------------------------------------------------video----------------------------------------------------->
+<div id="sectionVideoStream" class="container divHide" style="position: relative;z-index: -1;">
+    <div id="videoStream" class="row" style="position: relative">
+            <!--<img style="width: 100%;height:100vh;position: absolute" src="images/fondecran.jpg">-->
+    </div>
+</div>
+
+<!-------------------------------------------------------header----------------------------------------------------->
+<div id="headerQuiz" class="jumbotron navbar-custom-opacity text-center divHide">
+    <!--<h1>My First Bootstrap Page</h1>
+    <h3>Resize this responsive page to see the effect!</h3>-->
+</div>
+
+<!---------------------------------------------------page start----------------------------------------------------->
+<div id="sectionStart" class="container-fluid divHide">
+    <div class="row">
+        <div class="col-xs-6 text-left">
+            <div class="pull-left text-center">
+                <p><span id="classroomOccupancy" class="badge">0</span></p>
+                <h2>Teams</h2>
+            </div>
+        </div>
+
+        <div class="col-xs-6 text-right">
+            <div class="pull-right text-center">
+                <p><span id="playersOccupancy" class="badge">0</span></p>
+                <h2>Players</h2>
+
+                <button id="start-quiz"  class="btn btn-default hidden" style="margin-top: 15px">Start</button>
+
+            </div>
+        </div>
+
+        <div class="col-xs-12 text-center" style="margin-bottom: 200px;">
+            <div id="teamContent" class="row teamContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------page info----------------------------------------------------->
+
+<div id="sectionInfo" class="hidden color-content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="w3-progress-container w3-pale-blue">
+                <div id="progressBar" class="w3-progressbar bg-violet"></div>
+            </div>
+        </div>
+
+        <div id="dvInfo" class="col-xs-12 text-center" style="margin-top: 20vh"></div>
+
+    </div>
+</div>
+
+
+<!---------------------------------------------------duv Actions----------------------------------------------------->
+<div id="dvNext" class="col-xs-12 text-right hidden">
+    <button data-id="getScoreboardStudent" class="nextSection btn btn-lg btn-primary sharp">Next</button>
+
+    <button id="getResult" class="btn btn-success btn-lg sharp hidden">Get Results</button>
+    <button id="finalResult" data-id="finalScoreboardStudent" class="finalResult btn btn-primary btn-lg sharp hidden">Final results</button>
+    <button id="saveResult" class="btn btn-info btn-lg sharp hidden">Save results</button>
+</div>
+
+<!---------------------------------------------------page gamer----------------------------------------------------->
+<div id="sectionGamer" class="container-fluid hidden color-content">
+    <div class="row">
+
+        <div class="col-xs-3 text-center count">
+            <button id="countDownSlide" type="button" class="btn btn-info btn-circle btn-xl"></button>
+        </div>
+
+        <div id="content-slides" class="col-xs-6 text-center">
+            <div id="imgSlide"></div>
+            <div id="scoreboard-content"></div>
+        </div>
+
+        <div class="col-xs-3 text-center count">
+            <p><span id="answersCount" class="badge">0</span></p>
+            <h2>Answers</h2>
+        </div>
+
+        <div class="col-xs-12">
+            <div id="sectionAnswers" class="row container-fluid"></div>
+        </div>
+
+    </div>
+</div>
+
+<!---------------------------------------------------page Scoreboard--------------------------------------------------->
+<div id="sectionScoreboard" class="container hidden color-content count">
+    <div id="scoreboardResult" class="row text-center">
+    </div>
+</div>
+
+<!----------------------------------------------------page rate quiz--------------------------------------------------->
+<div id="rateQuiz" class="text-center row hidden count">
+    <div class="col-xs-6 sharp">
+        <button class="btn btn-huge btn-lg btn-success pull-right"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+    </div>
+    <div class="col-xs-6 sharp">
+        <button class="btn btn-huge btn-lg btn-danger pull-left"><span class="glyphicon glyphicon-thumbs-down"></span></button>
+    </div>
+</div>
+
+<!------------------------------------------------------footer--------------------------------------------------------->
+<div id="footer">
+    <h2>Waiting for teams...</h2>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+html,body{
+    height: 100%;
+}
+
+body{
+    overflow: hidden;
+}
+
+video{
+    width: 100%;
+    height:100vh;
+    position: absolute;
+    /*background-color: red;*/
+
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.bg-green{
+    background-color: #18BC9C;
+}
+.bg-black{
+    /*background:rgba(12,13,14,0.86);*/
+    background-color: #000000;
+}
+
+.bg-grey{
+    background-color: #F8F8FF;
+}
+.bg-violet{
+    background-color: #7233B2;
+}
+
+h1 { font-size: 5vmin;color: #ffffff}
+h2 { font-size: 4vmin; }
+h3 { font-size: 3vmin; }
+p { font-size: 2vmin; }
+ul{ font-size: 2.5vmin;}
+
+.divHide{
+    display: none;
+}
+
+.vertical-center {
+    margin-top: 28vh;
+}
+
+.navbar-custom-opacity {
+    /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    background: rgba(255,255,255,.1);
+    margin-bottom: 10px;
+    /*font-weight: 700;
+    color: white;
+    /*font-size: 10px;*/
+    border-color: white;
+    color: white;
+}
+
+.navbar-custom {
+    background-color: #f5f5f5;
+    /*font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+    margin-bottom: 0;
+    /*font-weight: 700;*/
+    color: #000000;
+    /*font-size: 10px;*/
+    border-color: darkgrey;
+    padding: 15px 0 15px 0;
+}
+
+
+#sectionStart h1,#sectionStart h2, #sectionStart h3,#sectionStart h4,#sectionStart h5,#sectionStart h6{
+    color: #ffffff;
+}
+.color-content h1,.color-content h2, .color-content h3,.color-content h4,.color-content h5,.color-content h6{
+    color: rgba(12,13,14,0.86);
+    font-weight: bold;
+}
+
+#sectionStart ul{
+    color: #ffffff;
+    /*font-size: 20px;*/
+}
+
+#sectionStart button{
+    padding: 10px 20px;
+    border-radius: 2px;
+    /*color: #9d9d9d;*/
+    box-shadow: inset 0 -3px rgba(0,0,0,.15);
+    border: none;
+    font-family: Montserrat,Helvetica,sans-serif;
+    /*font-size: 24px;*/
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+}
+
+#sectionStart span.badge{
+    font-size: 36px;
+}
+
+#sectionGamer span.badge{
+    font-size: 36px;
+}
+
+.teamContent{
+
+
+    padding: 30px;
+    height: 300px;
+    overflow: auto;
+    margin-top: -2vh;
+}
+
+.teams{
+
+    margin: 0 0 30px 0;
+    /*border: solid;*/
+}
+
+.nameClassroom{
+    padding: 10px 0 10px 0;
+    background: rgba(0,0,0,.3);
+
+    /*border: solid;*/
+}
+.namesPlayers{
+
+    padding: 10px 0 10px 0;
+    background: rgba(0,0,0,.15);
+}
+
+ul.csv { list-style: none; margin: 0; padding: 0; }
+ul.csv li { display: inline; }
+ul.csv li:after { content: ","; }
+ul.csv li:last-child:after { content: ""; }
+
+
+#correctAnswer{
+    font-size: 30px;
+    display: none;
+}
+
+.answer-1{background-color: #DE1831}
+.answer-2{background-color: #1F57A5}
+.answer-3{background-color: #D89E00}
+.answer-4{background-color: #5F991F}
+
+.imgSlides{
+    width: 100%;
+    height: 45vh;
+}
+#content-slides{
+    height: 45vh;position: relative;
+}
+
+#scoreboard-content{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+div.content-answer{
+    padding-left: 5px;
+    padding-right: 5px;
+
+}
+
+div.answer-broadcaster{
+    border-radius: 10px;
+    /*border: 2px solid #73AD21;*/
+    padding: 4vh 10px 10px 20px;
+    height: 15vh;
+    margin-top: 10px;
+}
+
+
+.btn-circle.btn-xl {
+    width: 80px;
+    height: 80px;
+    padding: 10px 16px;
+    font-size: 40px;
+    line-height: 1.33;
+    border-radius: 40px;
+}
+
+.sharp {
+    border-radius:0;
+    margin-top: 10px;
+}
+div.count{
+    padding-top: 80px;
+}
+.btn-huge{
+    padding: 3vmin;
+}
+
+span.glyphicon-thumbs-up, span.glyphicon-thumbs-down{
+    font-size: 4vmin;
+}
+
+.scoreboardList{
+    background-color: #eee;
+    margin: 5px;
+    height:50px;
+    padding-top: 10px;
+    font-size: large;
+}
+
+.winner{
+    background-color: lightblue;
+    height: 20vh;
+    padding-top: 6vh;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    background: #1368ce;
+    width: 100%;
+    height: 10vh;
+    padding: 0 10px 20px 10px;
+    /*padding-left: 20px;*/
+    /*background-image: url();*/
+    /*font-size: 28px;*/
+    line-height: 34px;
+    color: #fff;
+
+    vertical-align: middle;
+    text-shadow: none;
+    display: none;
+}
+
+/*background: rgba(0,0,0,.2);
