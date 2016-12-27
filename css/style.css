@@ -172,7 +172,7 @@ ul.csv li:last-child:after { content: ""; }
     height: 45vh;
 }
 #content-slides{
-    height: 45vh;position: relative;
+    height: 40vh;position: relative;
 }
 
 #scoreboard-content{
