@@ -685,7 +685,7 @@ $(function() {
             
           
             $('body').removeClass('bg-black').addClass('bg-grey');
-      
+            $(headerQuiz).removeClass('navbar-custom-opacity').addClass('navbar-custom');
             $(sectionStart).hide('slow', function(){ $(sectionStart).remove(); });
             
         }
