@@ -681,6 +681,13 @@ $(function() {
             $(sectionInfo).removeClass('hidden');
             $(imgSlide).show();
             $('#scoreboard-content').hide();
+            
+            
+          
+            $('body').removeClass('bg-black').addClass('bg-grey');
+      
+            $(sectionStart).hide('slow', function(){ $(sectionStart).remove(); });
+            $(sectionInfo).removeClass('hidden');
         }
 
 
